@@ -1,0 +1,22 @@
+<%= button_to emails_path, method:"create", :class => "ml-4 mb-5 btn-success", remote: true do %>
+  Recevoir un email
+<% end %>
+<div class="d-flex">
+  <div class="col-3">
+    <ul id="email-list">
+      <% @emails.each do  |email|%>
+        <div class="card">
+          <div class="card-body">
+            <li><%= link_to email.object, email_path(email.id), remote: true%></li>
+          </div>
+        </div>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="col-9">
+      <div id="email-body" class="card-body">
+        This is some text within a card body.
+      </div>
+    </div>
+</div>
