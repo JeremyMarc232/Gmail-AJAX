@@ -5,9 +5,9 @@
   <div class="col-3">
     <ul id="email-list">
       <% @emails.each do  |email|%>
-        <div class="card">
+        <div id="dismiss" class="card">
           <div class="card-body">
-            <li><%= link_to email.object, email_path(email.id), remote: true%></li>
+            <li id="objet-id-<%=email.id%>"> <%= link_to email.object, email_path(email.id), remote: true%></li>
           </div>
         </div>
       <% end %>
@@ -16,7 +16,7 @@
 
   <div class="col-9">
       <div id="email-body" class="card-body">
-        This is some text within a card body.
+        Clic dans la colonne de gauche pour afficher les emails!
       </div>
     </div>
 </div>

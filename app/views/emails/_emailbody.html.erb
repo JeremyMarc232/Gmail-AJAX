@@ -1,6 +1,7 @@
 
 <div class="col-9 card card-body">
-    <h1> <%= @email.object %> </h1>
-    <h2> <%= @email.body %> </h2>
-  </div>
+  <h1> <%= email.object %> </h1>
+  <h2> <%= email.body %> </h2>
+    
+  <%= link_to "supprimer", email_path(email.id), method:"delete", :class => "ml-4 mb-5 btn-danger", remote: true %>
 </div>

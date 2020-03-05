@@ -1,0 +1,4 @@
+alert("le fichier JS est exécuté!");
+document.getElementById("email-body").innerHTML="<%= j render 'destroy', email: @email %>"
+document.getElementById("objet-id-<%=@email.id%>").remove()
+document.getElementById("dismiss").remove()
